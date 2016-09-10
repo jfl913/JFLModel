@@ -8,7 +8,17 @@
 
 #import "JFLJSONAdapter.h"
 
+@interface JFLJSONAdapter ()
+
+@property (nonatomic, strong, readonly) Class modelClass;
+@property (nonatomic, copy, readonly) NSDictionary *JSONKeyPathsByPropertyKey;
+@property (nonatomic, copy) NSDictionary *valueTransformersByPropertyKey;
+
+@end
+
 @implementation JFLJSONAdapter
+
+#pragma mark - Convenience methods
 
 + (id)modelOfClass:(Class)modelClass
          fromModel:(id)model
@@ -21,9 +31,10 @@
                         error:error];
 }
 
-+ (NSDictionary *)JSONDictionaryFromModel:(id)model
++ (NSDictionary *)JSONDictionaryFromModel:(id<JFLJSONSerializing>)model
                                     error:(NSError *)error
 {
+    JFLJSONAdapter *adapter = [[self alloc] initWithModelClass:model.class];
     return @{};
 }
 
@@ -32,6 +43,23 @@ fromJSONDictionary:(NSDictionary *)JSONDictionary
              error:(NSError *)error
 {
     return nil;
+}
+
+#pragma mark - Lifecycle
+
+- (id)initWithModelClass:(Class)modelClass
+{
+    NSParameterAssert(modelClass != nil);
+    NSParameterAssert([modelClass conformsToProtocol:@protocol(JFLJSONSerializing)]);
+    
+    self = [super init];
+    if (self == nil) return nil;
+    
+    _modelClass = modelClass;
+    
+    _JSONKeyPathsByPropertyKey = [modelClass JSONKeyPathsByPropertyKey];
+    
+    return self;
 }
 
 @end

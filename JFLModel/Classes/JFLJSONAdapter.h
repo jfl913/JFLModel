@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol JFLJSONSerializing <NSObject>
+@required
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey;
+
+@end
+
 @interface JFLJSONAdapter : NSObject
 
 + (id)modelOfClass:(Class)modelClass
