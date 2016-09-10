@@ -1,0 +1,6 @@
+framework module JFLModel {
+  umbrella header "JFLModel-umbrella.h"
+
+  export *
+  module * { export * }
+}

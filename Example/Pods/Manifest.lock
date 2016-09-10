@@ -1,0 +1,16 @@
+PODS:
+  - JFLModel (0.1.0)
+
+DEPENDENCIES:
+  - JFLModel (from `../`)
+
+EXTERNAL SOURCES:
+  JFLModel:
+    :path: ../
+
+SPEC CHECKSUMS:
+  JFLModel: fc4a3c45adae4771eae9a8b8249f9b247c87851d
+
+PODFILE CHECKSUM: da2ec7de733111f56e0f09bcfd90743baf7caa6b
+
+COCOAPODS: 1.0.1
