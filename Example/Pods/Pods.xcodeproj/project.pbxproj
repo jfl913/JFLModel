@@ -12,11 +12,12 @@
 		29825B96878B609344D9CE5C01BC73FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		3524DCC126E39A2EBA1FB7460B466D0E /* JFLModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC042B5B41A690B8689D84B7DF6F454 /* JFLModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E7674AEB4438056F493CE4815BA4B39 /* Pods-JFLModel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1EE6851A9C7F1592FD3C379A03C7E0E /* Pods-JFLModel_Example-dummy.m */; };
+		85B0F0BB1D83F2560065B8F2 /* JFLJSONAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 85B0F0B91D83F2560065B8F2 /* JFLJSONAdapter.h */; };
+		85B0F0BC1D83F2560065B8F2 /* JFLJSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B0F0BA1D83F2560065B8F2 /* JFLJSONAdapter.m */; };
 		B7067FED5F9868A4BD326F15924CD32C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		B8C2B987C675C45DC62612D8FC19EEAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		CFF00F14C64A42C869AF5B204B5C064F /* JFLModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5043B3FDB81DA52AAA56F1FB361586 /* JFLModel-dummy.m */; };
 		F2E3E1045833208D616FC2684032887D /* Pods-JFLModel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 753A573CC4872ADE0C22A31407013B13 /* Pods-JFLModel_Tests-dummy.m */; };
-		F60D296484CE660B4506BD275FAFEA8F /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 734EEC2067C8446ADE2A9A72F504580B /* ReplaceMe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +44,10 @@
 		58F0CB07D5B31D2D85457985060BCC73 /* Pods-JFLModel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFLModel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5BE3C1BA1C5ABDD5727BF9E25BC7FB31 /* JFLModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFLModel.xcconfig; sourceTree = "<group>"; };
 		652CF626BF8B872EC5C328E1C652E29E /* Pods-JFLModel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFLModel_Example.release.xcconfig"; sourceTree = "<group>"; };
-		734EEC2067C8446ADE2A9A72F504580B /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
 		753A573CC4872ADE0C22A31407013B13 /* Pods-JFLModel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JFLModel_Tests-dummy.m"; sourceTree = "<group>"; };
 		75BD55B14789253D87A212123454CB1D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85B0F0B91D83F2560065B8F2 /* JFLJSONAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFLJSONAdapter.h; sourceTree = "<group>"; };
+		85B0F0BA1D83F2560065B8F2 /* JFLJSONAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFLJSONAdapter.m; sourceTree = "<group>"; };
 		8DB3061DFE04171D7A746F5BE915F7CD /* JFLModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFLModel-prefix.pch"; sourceTree = "<group>"; };
 		92B3EA05F5B21603242726CB80D0F461 /* Pods-JFLModel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFLModel_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -95,7 +97,8 @@
 		005A8B96B94BC88579452C101DDC1AAE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				734EEC2067C8446ADE2A9A72F504580B /* ReplaceMe.m */,
+				85B0F0B91D83F2560065B8F2 /* JFLJSONAdapter.h */,
+				85B0F0BA1D83F2560065B8F2 /* JFLJSONAdapter.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3524DCC126E39A2EBA1FB7460B466D0E /* JFLModel-umbrella.h in Headers */,
+				85B0F0BB1D83F2560065B8F2 /* JFLJSONAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,8 +349,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B0F0BC1D83F2560065B8F2 /* JFLJSONAdapter.m in Sources */,
 				CFF00F14C64A42C869AF5B204B5C064F /* JFLModel-dummy.m in Sources */,
-				F60D296484CE660B4506BD275FAFEA8F /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
