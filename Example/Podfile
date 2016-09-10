@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JFLModel_Example' do
+  pod 'JFLModel', :path => '../'
+
+  target 'JFLModel_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
