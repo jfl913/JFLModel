@@ -1,7 +1,7 @@
-use_frameworks!
 
 target 'JFLModel_Example' do
   pod 'JFLModel', :path => '../'
+  pod 'libextobjc'
 
   target 'JFLModel_Tests' do
     inherit! :search_paths

@@ -8,6 +8,7 @@
 
 #import "JFLModel.h"
 #import <objc/runtime.h>
+#import "EXTScope.h"
 
 static void *JFLModelCachedPropertyKeysKey = &JFLModelCachedPropertyKeysKey;
 
