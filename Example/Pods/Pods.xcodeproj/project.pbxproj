@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02E43D81581DFB3C73CFA212C8C03E38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		04EF38E0DFD14ADBE5C3978C1B2BD2B4 /* EXTSelectorChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA3A196E73F07B11065EC8C7C7CD6C7 /* EXTSelectorChecking.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		12DBC979B01D338DF7C4E612878ABFC6 /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 5273F40524553640580A619580C8426E /* EXTConcreteProtocol.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		2C5300ABF271F30BA877FDDD2AB35579 /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = E7CD3FE3026F59BEEFC7B8789EE5E82B /* metamacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -15,10 +14,8 @@
 		31CBECF9EB5EB23128B249942AA51576 /* JFLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FFD18F940D28CFC631943F5E3CEB67 /* JFLModel.m */; };
 		36642F7E5528D58693D6449BB854D1A5 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D313C9CF89D160F5FCFA2EC08BB913 /* NSMethodSignature+EXT.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		3732583E4CC320FBBDC699C0F9E01A5F /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = BD040DB28458B3B82C4C95F0C3F7CE89 /* EXTADT.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		37E1BD5D119476EA8AFB2F7E849B768F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		3C5B8B594AC0972BA5B96C85388A5262 /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7333207A3FFF8DDE7ED7D2108614A72F /* EXTNil.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		43E06878B9DDD97B97E620154433067D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		4DABD476E027AEFEF804159E153509BF /* Pods-JFLModel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9669EAB1DEC23A72B516E45DB7F3F7 /* Pods-JFLModel_Tests-dummy.m */; };
+		460ED4AD5C1E77F4E6492A8A2D1C61A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		5A64E44CA5954F0728A9F87824800B9D /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F4D50779EDA2C187EB928AE0DD3433 /* EXTRuntimeExtensions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		5DF4A6E8C8E24614E19472EB2C96A2D7 /* extobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = A97CF1EA786E3379856D078BF97B7CCB /* extobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E4EBD513363F1D5E6B509FB935C280E /* JFLJSONAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = FD99968EBB7EAFF72E3106CD5F0DF8E3 /* JFLJSONAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,7 +28,10 @@
 		9E106FE64F7F7562FF8509753D6CF91C /* JFLModel.h in Headers */ = {isa = PBXBuildFile; fileRef = EDAD811BCB1E2F2EEAD4CD935C847FF9 /* JFLModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6B11A069661C5BF26A7525B106596F7 /* EXTSafeCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = E2701FDB4D03F3DC1B1F80305F96E8A5 /* EXTSafeCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE8F1B7570CC5EDFAB74415D8CF8240B /* EXTSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 01356467E2DBC92F030F7D24D80330D0 /* EXTSafeCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B88C7375AE42CC4B92E6E469A43C2258 /* Pods-JFLModel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F42DAE5CC95D1E6CAD3AC8490B9FDAF /* Pods-JFLModel_Example-dummy.m */; };
+		B42F1DE4509F6119889CCDE7839B1883 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		B6C8657C1D8D5E5200C334B2 /* JFLRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C8657A1D8D5E5200C334B2 /* JFLRuntimeExtensions.h */; };
+		B6C8657D1D8D5E5200C334B2 /* JFLRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C8657B1D8D5E5200C334B2 /* JFLRuntimeExtensions.m */; };
+		B88C7375AE42CC4B92E6E469A43C2258 /* Pods-JFLModel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 358C60A66789E6B5C051045CD5BE2D0D /* Pods-JFLModel_Example-dummy.m */; };
 		BDBE87136BB4A1015530E6C617AE96C4 /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC19F137C4542B0310912840B016F69 /* NSInvocation+EXT.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		CD6179E42B9A509B9F78F68F4B41745A /* EXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 18EFF5E2E586F983B2D7176201581E8B /* EXTRuntimeExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CF18881797DB18EFDC66F9E226D27744 /* EXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = C5A0FB86029C103A83B2269AF6212959 /* EXTScope.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -39,8 +39,8 @@
 		DFD851AA030267EA3C1E8D380CC893EB /* EXTSynthesize.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C725C6AFFCD9A9619693A3A56D58ABE /* EXTSynthesize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEC39A53C1327C2C01F6A9CD206FF410 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C75CC2F3A1892F3EEC920B8DFB9442 /* EXTScope.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		F1F67673530A55215B25D502EA0614B1 /* EXTSelectorChecking.h in Headers */ = {isa = PBXBuildFile; fileRef = CFA698D2FE8EE78379EA0A8786E51EBF /* EXTSelectorChecking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F62B2B21F7BD7A5EB961F1DBC5A52230 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		FC9D96B3097C8342ED2BEFFFBEE61768 /* EXTNil.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A51E03C49B99ECE7C08B99FD2B6A379 /* EXTNil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FFD6CE1CF1247DE310AF0DD08AE0C8F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,73 +62,59 @@
 
 /* Begin PBXFileReference section */
 		01356467E2DBC92F030F7D24D80330D0 /* EXTSafeCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTSafeCategory.m; path = extobjc/EXTSafeCategory.m; sourceTree = "<group>"; };
+		02E181376B7FC0869E837AB99543696F /* Pods-JFLModel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JFLModel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		05E3F6D76F6288EDD6B6F2936E4DCC59 /* Pods-JFLModel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFLModel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		05FFD18F940D28CFC631943F5E3CEB67 /* JFLModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JFLModel.m; sourceTree = "<group>"; };
+		072BF8624C27CBC754EE5148826302A6 /* liblibextobjc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibextobjc.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		08552B340FD176CDA5FCCCDD6E2B1B4E /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTKeyPathCoding.h; path = extobjc/EXTKeyPathCoding.h; sourceTree = "<group>"; };
 		0B1CF8DDDF2F5F8AA03FC3D67E806D39 /* JFLModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JFLModel-dummy.m"; sourceTree = "<group>"; };
 		18EFF5E2E586F983B2D7176201581E8B /* EXTRuntimeExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTRuntimeExtensions.h; path = extobjc/EXTRuntimeExtensions.h; sourceTree = "<group>"; };
-		1C8A81451EC91490764AFEE14A4FCCB6 /* Pods-JFLModel_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JFLModel_Example-resources.sh"; sourceTree = "<group>"; };
-		1F42DAE5CC95D1E6CAD3AC8490B9FDAF /* Pods-JFLModel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JFLModel_Example-dummy.m"; sourceTree = "<group>"; };
+		1B5271864DC2CD4080FC669324AAA18C /* libJFLModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJFLModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2199782F1ED40C872278B543B8F5F0E7 /* NSMethodSignature+EXT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMethodSignature+EXT.h"; path = "extobjc/NSMethodSignature+EXT.h"; sourceTree = "<group>"; };
-		2221F0434EDA1BD3DED727B44684B694 /* Pods-JFLModel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFLModel_Example.release.xcconfig"; sourceTree = "<group>"; };
 		28D0040C55301F7F34E12179D00DE127 /* libextobjc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "libextobjc-dummy.m"; sourceTree = "<group>"; };
-		3DFC2C23B3544E5340C860490A9F197F /* Pods-JFLModel_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JFLModel_Tests-resources.sh"; sourceTree = "<group>"; };
-		47DA275A7F0C3DE71E2A1389AE6399C0 /* Pods-JFLModel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFLModel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		358C60A66789E6B5C051045CD5BE2D0D /* Pods-JFLModel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JFLModel_Example-dummy.m"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5273F40524553640580A619580C8426E /* EXTConcreteProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTConcreteProtocol.m; path = extobjc/EXTConcreteProtocol.m; sourceTree = "<group>"; };
 		6F01C7E07C3983DCB0E86AE916280CF2 /* NSInvocation+EXT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+EXT.h"; path = "extobjc/NSInvocation+EXT.h"; sourceTree = "<group>"; };
 		7333207A3FFF8DDE7ED7D2108614A72F /* EXTNil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTNil.m; path = extobjc/EXTNil.m; sourceTree = "<group>"; };
+		77C86640012EDD566B4A4913667909BF /* Pods-JFLModel_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JFLModel_Example-frameworks.sh"; sourceTree = "<group>"; };
 		79C95136FAD0F836D63A673F3ACCCF55 /* EXTADT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTADT.h; path = extobjc/EXTADT.h; sourceTree = "<group>"; };
 		7C725C6AFFCD9A9619693A3A56D58ABE /* EXTSynthesize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTSynthesize.h; path = extobjc/EXTSynthesize.h; sourceTree = "<group>"; };
-		7CB7916856674E36608F64F189040D6A /* Pods-JFLModel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFLModel_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		80D313C9CF89D160F5FCFA2EC08BB913 /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMethodSignature+EXT.m"; path = "extobjc/NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
-		80DB42225E38A0354ACA3CAB49310140 /* libPods-JFLModel_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JFLModel_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		898345F6A9E19C8B77F76E757994AC66 /* libextobjc-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "libextobjc-prefix.pch"; sourceTree = "<group>"; };
-		8D80E0AEBA0534DA1745C627A1AA0B4B /* libJFLModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJFLModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FFB1CD2A0F7C533397A44ED41E7D267 /* Pods-JFLModel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFLModel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		915A71F1B64BCC8895B80F58A6AA988B /* libextobjc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = libextobjc.xcconfig; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		973FB57A39FA94C51098C0C53A1DEF78 /* libPods-JFLModel_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JFLModel_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C75CC2F3A1892F3EEC920B8DFB9442 /* EXTScope.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTScope.m; path = extobjc/EXTScope.m; sourceTree = "<group>"; };
+		9925870090D6E497289128087A8396A7 /* Pods-JFLModel_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JFLModel_Example-resources.sh"; sourceTree = "<group>"; };
 		9A51E03C49B99ECE7C08B99FD2B6A379 /* EXTNil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTNil.h; path = extobjc/EXTNil.h; sourceTree = "<group>"; };
 		9B7E0AC4E6D88A4125598BCAC510493B /* EXTConcreteProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTConcreteProtocol.h; path = extobjc/EXTConcreteProtocol.h; sourceTree = "<group>"; };
-		9C127BCEBD8D19B1B3BD8B53471A7FC2 /* Pods-JFLModel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFLModel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A4ECAC94A83C7EAA4A4FC07ECCED52D9 /* Pods-JFLModel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFLModel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A97CF1EA786E3379856D078BF97B7CCB /* extobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = extobjc.h; path = extobjc/extobjc.h; sourceTree = "<group>"; };
+		B6C8657A1D8D5E5200C334B2 /* JFLRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFLRuntimeExtensions.h; sourceTree = "<group>"; };
+		B6C8657B1D8D5E5200C334B2 /* JFLRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFLRuntimeExtensions.m; sourceTree = "<group>"; };
+		B9085750B108C3EA4D6BFEAAB3F18DA4 /* Pods-JFLModel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFLModel_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BD040DB28458B3B82C4C95F0C3F7CE89 /* EXTADT.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTADT.m; path = extobjc/EXTADT.m; sourceTree = "<group>"; };
 		BFA3A196E73F07B11065EC8C7C7CD6C7 /* EXTSelectorChecking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTSelectorChecking.m; path = extobjc/EXTSelectorChecking.m; sourceTree = "<group>"; };
-		C058428B550B02E9EF27AEF413132B09 /* Pods-JFLModel_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JFLModel_Example-frameworks.sh"; sourceTree = "<group>"; };
 		C2F4D50779EDA2C187EB928AE0DD3433 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTRuntimeExtensions.m; path = extobjc/EXTRuntimeExtensions.m; sourceTree = "<group>"; };
-		C4AA0EB57C86D7A4437B889A7BF7F53E /* Pods-JFLModel_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JFLModel_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		C5A0FB86029C103A83B2269AF6212959 /* EXTScope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTScope.h; path = extobjc/EXTScope.h; sourceTree = "<group>"; };
 		CD2427A790F8C3F603A9BA42D9B57D62 /* JFLModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFLModel.xcconfig; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CFA698D2FE8EE78379EA0A8786E51EBF /* EXTSelectorChecking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTSelectorChecking.h; path = extobjc/EXTSelectorChecking.h; sourceTree = "<group>"; };
-		D70855479AE257791F47861297404BEA /* Pods-JFLModel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JFLModel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DE8924E3FA43A318092DB640E7DD99A7 /* JFLJSONAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JFLJSONAdapter.m; sourceTree = "<group>"; };
-		DEE1A33BD0D9FA4BE4EDEA9DA8D5E77F /* Pods-JFLModel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JFLModel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DF9669EAB1DEC23A72B516E45DB7F3F7 /* Pods-JFLModel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JFLModel_Tests-dummy.m"; sourceTree = "<group>"; };
+		E1F2FE97F9F0D5660181892370DA8D56 /* libPods-JFLModel_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JFLModel_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2701FDB4D03F3DC1B1F80305F96E8A5 /* EXTSafeCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTSafeCategory.h; path = extobjc/EXTSafeCategory.h; sourceTree = "<group>"; };
 		E2A76BC0CF0ADDDA75989C136767BD9F /* JFLModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFLModel-prefix.pch"; sourceTree = "<group>"; };
-		E2BE1F0FD6101ECFDB9592D89C9B4094 /* liblibextobjc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibextobjc.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CD3FE3026F59BEEFC7B8789EE5E82B /* metamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = metamacros.h; path = extobjc/metamacros.h; sourceTree = "<group>"; };
+		EAFD379986C3E9BED499AA5F25C6E950 /* Pods-JFLModel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFLModel_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EBC19F137C4542B0310912840B016F69 /* NSInvocation+EXT.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+EXT.m"; path = "extobjc/NSInvocation+EXT.m"; sourceTree = "<group>"; };
 		EDAD811BCB1E2F2EEAD4CD935C847FF9 /* JFLModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JFLModel.h; sourceTree = "<group>"; };
 		FD99968EBB7EAFF72E3106CD5F0DF8E3 /* JFLJSONAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JFLJSONAdapter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		098B0ECEAC629E6860A3B3ED7CCF0FDB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43E06878B9DDD97B97E620154433067D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AAEEF98A03D5570436062D255BB167B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02E43D81581DFB3C73CFA212C8C03E38 /* Foundation.framework in Frameworks */,
+				B42F1DE4509F6119889CCDE7839B1883 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFD6CE1CF1247DE310AF0DD08AE0C8F2 /* Foundation.framework in Frameworks */,
+				460ED4AD5C1E77F4E6492A8A2D1C61A7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,28 +130,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37E1BD5D119476EA8AFB2F7E849B768F /* Foundation.framework in Frameworks */,
+				F62B2B21F7BD7A5EB961F1DBC5A52230 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05A39CBFA07415B45179FA1317796249 /* Pods-JFLModel_Example */ = {
-			isa = PBXGroup;
-			children = (
-				DEE1A33BD0D9FA4BE4EDEA9DA8D5E77F /* Pods-JFLModel_Example-acknowledgements.markdown */,
-				47DA275A7F0C3DE71E2A1389AE6399C0 /* Pods-JFLModel_Example-acknowledgements.plist */,
-				1F42DAE5CC95D1E6CAD3AC8490B9FDAF /* Pods-JFLModel_Example-dummy.m */,
-				C058428B550B02E9EF27AEF413132B09 /* Pods-JFLModel_Example-frameworks.sh */,
-				1C8A81451EC91490764AFEE14A4FCCB6 /* Pods-JFLModel_Example-resources.sh */,
-				8FFB1CD2A0F7C533397A44ED41E7D267 /* Pods-JFLModel_Example.debug.xcconfig */,
-				2221F0434EDA1BD3DED727B44684B694 /* Pods-JFLModel_Example.release.xcconfig */,
-			);
-			name = "Pods-JFLModel_Example";
-			path = "Target Support Files/Pods-JFLModel_Example";
-			sourceTree = "<group>";
-		};
 		0B91AE3B0A9535A446F6940E5B803B00 /* EXTScope */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +155,21 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/JFLModel";
+			sourceTree = "<group>";
+		};
+		1671952C0FFC65F48C0C0FC185E8BA45 /* Pods-JFLModel_Example */ = {
+			isa = PBXGroup;
+			children = (
+				02E181376B7FC0869E837AB99543696F /* Pods-JFLModel_Example-acknowledgements.markdown */,
+				05E3F6D76F6288EDD6B6F2936E4DCC59 /* Pods-JFLModel_Example-acknowledgements.plist */,
+				358C60A66789E6B5C051045CD5BE2D0D /* Pods-JFLModel_Example-dummy.m */,
+				77C86640012EDD566B4A4913667909BF /* Pods-JFLModel_Example-frameworks.sh */,
+				9925870090D6E497289128087A8396A7 /* Pods-JFLModel_Example-resources.sh */,
+				B9085750B108C3EA4D6BFEAAB3F18DA4 /* Pods-JFLModel_Example.debug.xcconfig */,
+				EAFD379986C3E9BED499AA5F25C6E950 /* Pods-JFLModel_Example.release.xcconfig */,
+			);
+			name = "Pods-JFLModel_Example";
+			path = "Target Support Files/Pods-JFLModel_Example";
 			sourceTree = "<group>";
 		};
 		23F952D2FEB455D32FD9C7F703EEA4F9 /* NSInvocation+EXT */ = {
@@ -205,25 +191,6 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		3CA2D1E27D128A25ED9297F905B173BC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8D80E0AEBA0534DA1745C627A1AA0B4B /* libJFLModel.a */,
-				E2BE1F0FD6101ECFDB9592D89C9B4094 /* liblibextobjc.a */,
-				973FB57A39FA94C51098C0C53A1DEF78 /* libPods-JFLModel_Example.a */,
-				80DB42225E38A0354ACA3CAB49310140 /* libPods-JFLModel_Tests.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		4F4402BE79FA8BA84B935D43E3722449 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +198,8 @@
 				DE8924E3FA43A318092DB640E7DD99A7 /* JFLJSONAdapter.m */,
 				EDAD811BCB1E2F2EEAD4CD935C847FF9 /* JFLModel.h */,
 				05FFD18F940D28CFC631943F5E3CEB67 /* JFLModel.m */,
+				B6C8657A1D8D5E5200C334B2 /* JFLRuntimeExtensions.h */,
+				B6C8657B1D8D5E5200C334B2 /* JFLRuntimeExtensions.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -252,6 +221,16 @@
 				08552B340FD176CDA5FCCCDD6E2B1B4E /* EXTKeyPathCoding.h */,
 			);
 			name = EXTKeyPathCoding;
+			sourceTree = "<group>";
+		};
+		649E0CD79DE1BA4C5DCEDF62A1F7E880 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B5271864DC2CD4080FC669324AAA18C /* libJFLModel.a */,
+				072BF8624C27CBC754EE5148826302A6 /* liblibextobjc.a */,
+				E1F2FE97F9F0D5660181892370DA8D56 /* libPods-JFLModel_Example.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		666FC37DD161F8C97373A0626507CEC6 /* EXTNil */ = {
@@ -276,12 +255,12 @@
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				F8DA59EC7EDF519E5D27CE65221F62ED /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				88CD6454BBE513E484A4A92205B4C5D0 /* Pods */,
-				3CA2D1E27D128A25ED9297F905B173BC /* Products */,
-				AF9B7C3518C935C4F5532F582EDA3D21 /* Targets Support Files */,
+				649E0CD79DE1BA4C5DCEDF62A1F7E880 /* Products */,
+				FABBF91CF5CCCE67535BDE286F230A67 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -330,30 +309,6 @@
 			name = EXTADT;
 			sourceTree = "<group>";
 		};
-		AD74B1D88C72D54BABB46011EADF1F74 /* Pods-JFLModel_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				D70855479AE257791F47861297404BEA /* Pods-JFLModel_Tests-acknowledgements.markdown */,
-				A4ECAC94A83C7EAA4A4FC07ECCED52D9 /* Pods-JFLModel_Tests-acknowledgements.plist */,
-				DF9669EAB1DEC23A72B516E45DB7F3F7 /* Pods-JFLModel_Tests-dummy.m */,
-				C4AA0EB57C86D7A4437B889A7BF7F53E /* Pods-JFLModel_Tests-frameworks.sh */,
-				3DFC2C23B3544E5340C860490A9F197F /* Pods-JFLModel_Tests-resources.sh */,
-				9C127BCEBD8D19B1B3BD8B53471A7FC2 /* Pods-JFLModel_Tests.debug.xcconfig */,
-				7CB7916856674E36608F64F189040D6A /* Pods-JFLModel_Tests.release.xcconfig */,
-			);
-			name = "Pods-JFLModel_Tests";
-			path = "Target Support Files/Pods-JFLModel_Tests";
-			sourceTree = "<group>";
-		};
-		AF9B7C3518C935C4F5532F582EDA3D21 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				05A39CBFA07415B45179FA1317796249 /* Pods-JFLModel_Example */,
-				AD74B1D88C72D54BABB46011EADF1F74 /* Pods-JFLModel_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		B863C24F2C045F2E015FCC5B692DD787 /* EXTSelectorChecking */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,9 +321,17 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		D23A1B7960976F4828BB0CC63B72E913 /* NSMethodSignature+EXT */ = {
@@ -413,6 +376,14 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		FABBF91CF5CCCE67535BDE286F230A67 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1671952C0FFC65F48C0C0FC185E8BA45 /* Pods-JFLModel_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		FCC36DFF175C9895261E811A0BA5FEDE /* EXTConcreteProtocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E4EBD513363F1D5E6B509FB935C280E /* JFLJSONAdapter.h in Headers */,
+				B6C8657C1D8D5E5200C334B2 /* JFLRuntimeExtensions.h in Headers */,
 				9E106FE64F7F7562FF8509753D6CF91C /* JFLModel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,7 +444,7 @@
 			);
 			name = "Pods-JFLModel_Example";
 			productName = "Pods-JFLModel_Example";
-			productReference = 973FB57A39FA94C51098C0C53A1DEF78 /* libPods-JFLModel_Example.a */;
+			productReference = E1F2FE97F9F0D5660181892370DA8D56 /* libPods-JFLModel_Example.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		56B36F2BE17B7338A2DBF4FE6BC1832F /* JFLModel */ = {
@@ -489,23 +461,7 @@
 			);
 			name = JFLModel;
 			productName = JFLModel;
-			productReference = 8D80E0AEBA0534DA1745C627A1AA0B4B /* libJFLModel.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		57D6AE83FF6D425363100929013E2DCC /* Pods-JFLModel_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C9971CD6973D06B0EE9032E4757D789 /* Build configuration list for PBXNativeTarget "Pods-JFLModel_Tests" */;
-			buildPhases = (
-				14E0ECEA5986359EA854783E1EC4CDF1 /* Sources */,
-				098B0ECEAC629E6860A3B3ED7CCF0FDB /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-JFLModel_Tests";
-			productName = "Pods-JFLModel_Tests";
-			productReference = 80DB42225E38A0354ACA3CAB49310140 /* libPods-JFLModel_Tests.a */;
+			productReference = 1B5271864DC2CD4080FC669324AAA18C /* libJFLModel.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		7E41CA2ECB40C640963734378302229C /* libextobjc */ = {
@@ -522,7 +478,7 @@
 			);
 			name = libextobjc;
 			productName = libextobjc;
-			productReference = E2BE1F0FD6101ECFDB9592D89C9B4094 /* liblibextobjc.a */;
+			productReference = 072BF8624C27CBC754EE5148826302A6 /* liblibextobjc.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -531,7 +487,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -542,27 +498,18 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3CA2D1E27D128A25ED9297F905B173BC /* Products */;
+			productRefGroup = 649E0CD79DE1BA4C5DCEDF62A1F7E880 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				56B36F2BE17B7338A2DBF4FE6BC1832F /* JFLModel */,
 				7E41CA2ECB40C640963734378302229C /* libextobjc */,
 				4D8F19DB40859409ADB881D565CADB6F /* Pods-JFLModel_Example */,
-				57D6AE83FF6D425363100929013E2DCC /* Pods-JFLModel_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		14E0ECEA5986359EA854783E1EC4CDF1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4DABD476E027AEFEF804159E153509BF /* Pods-JFLModel_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1C0B9EEC95F5A8A0A05E48D32D9046AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -593,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DED9F536C154E3542F5417843AE81FA /* JFLJSONAdapter.m in Sources */,
+				B6C8657D1D8D5E5200C334B2 /* JFLRuntimeExtensions.m in Sources */,
 				2D78CFDAE78784059E8139263EC20759 /* JFLModel-dummy.m in Sources */,
 				31CBECF9EB5EB23128B249942AA51576 /* JFLModel.m in Sources */,
 			);
@@ -616,11 +564,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
+		043202037B3270B0422B65B263902D43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 915A71F1B64BCC8895B80F58A6AA988B /* libextobjc.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/libextobjc/libextobjc-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -637,10 +602,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -654,79 +616,13 @@
 			};
 			name = Release;
 		};
-		1C699BF0250CBCFD3AEEA0FC8DBB6066 /* Release */ = {
+		289128CCF627B0D608DFB6C7A269B380 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 915A71F1B64BCC8895B80F58A6AA988B /* libextobjc.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/libextobjc/libextobjc-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		1F966752677F3D1500A2187CB453D253 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CB7916856674E36608F64F189040D6A /* Pods-JFLModel_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		34046519781681104EE5D3CA3C14106C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FFB1CD2A0F7C533397A44ED41E7D267 /* Pods-JFLModel_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		6B2BC7ACE804C730427AD0E9C2619D20 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD2427A790F8C3F603A9BA42D9B57D62 /* JFLModel.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/JFLModel/JFLModel-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -738,74 +634,10 @@
 			};
 			name = Debug;
 		};
-		9C97C5F1EF99475FEBCEC32EACEB0153 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C127BCEBD8D19B1B3BD8B53471A7FC2 /* Pods-JFLModel_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		9EC8C97E5951C2381C2B5E9BF5ADF7AB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD2427A790F8C3F603A9BA42D9B57D62 /* JFLModel.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/JFLModel/JFLModel-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		C03C85ADAA55E4283288FE1EF862706D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2221F0434EDA1BD3DED727B44684B694 /* Pods-JFLModel_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
+		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -820,12 +652,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -843,16 +673,13 @@
 			};
 			name = Debug;
 		};
-		D91A5619168D678D478E3FFEBD3C53D8 /* Debug */ = {
+		6753EA17C9D4D93F8E966A6EB0F1BF05 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 915A71F1B64BCC8895B80F58A6AA988B /* libextobjc.xcconfig */;
+			baseConfigurationReference = CD2427A790F8C3F603A9BA42D9B57D62 /* JFLModel.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/libextobjc/libextobjc-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				GCC_PREFIX_HEADER = "Target Support Files/JFLModel/JFLModel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -864,14 +691,66 @@
 			};
 			name = Debug;
 		};
+		75F7CFA4D6414F9D30A0728C55499B68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD2427A790F8C3F603A9BA42D9B57D62 /* JFLModel.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JFLModel/JFLModel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8C4D9EC60301B62266D6FAFE441A266E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAFD379986C3E9BED499AA5F25C6E950 /* Pods-JFLModel_Example.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C0BD2BA252F4AFCF2D9750B385489C9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9085750B108C3EA4D6BFEAAB3F18DA4 /* Pods-JFLModel_Example.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
-				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
+				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
+				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -879,8 +758,8 @@
 		33E537F44F838C3877C0BB095284CF3C /* Build configuration list for PBXNativeTarget "JFLModel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6B2BC7ACE804C730427AD0E9C2619D20 /* Debug */,
-				9EC8C97E5951C2381C2B5E9BF5ADF7AB /* Release */,
+				6753EA17C9D4D93F8E966A6EB0F1BF05 /* Debug */,
+				75F7CFA4D6414F9D30A0728C55499B68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -888,17 +767,8 @@
 		4202FE32FFDCFDBC7D76C6532A93A1F4 /* Build configuration list for PBXNativeTarget "Pods-JFLModel_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				34046519781681104EE5D3CA3C14106C /* Debug */,
-				C03C85ADAA55E4283288FE1EF862706D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C9971CD6973D06B0EE9032E4757D789 /* Build configuration list for PBXNativeTarget "Pods-JFLModel_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C97C5F1EF99475FEBCEC32EACEB0153 /* Debug */,
-				1F966752677F3D1500A2187CB453D253 /* Release */,
+				C0BD2BA252F4AFCF2D9750B385489C9C /* Debug */,
+				8C4D9EC60301B62266D6FAFE441A266E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -906,8 +776,8 @@
 		FEF993837F4F45362BC9F0E8A2EFF23D /* Build configuration list for PBXNativeTarget "libextobjc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D91A5619168D678D478E3FFEBD3C53D8 /* Debug */,
-				1C699BF0250CBCFD3AEEA0FC8DBB6066 /* Release */,
+				289128CCF627B0D608DFB6C7A269B380 /* Debug */,
+				043202037B3270B0422B65B263902D43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

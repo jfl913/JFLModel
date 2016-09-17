@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, JFLPropertyStorage) {
+    JFLPropertyStorageNone,
+    JFLPropertyStorageTransitory,
+    JFLPropertyStoragePermanent,
+};
+
 @protocol JFLModel <NSObject>
 
 + (NSSet *)propertyKeys;

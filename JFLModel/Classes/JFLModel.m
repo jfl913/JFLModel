@@ -28,7 +28,16 @@ static void *JFLModelCachedPropertyKeysKey = &JFLModelCachedPropertyKeysKey;
         cls = cls.superclass;
         if (properties == NULL) continue;
         
+        // 退出时，释放properties
+        // for automatically cleaning up manually-allocated memory, file handles, locks, etc., at the end of a scope.
+        @onExit {
+            free(properties);
+        };
         
+        for (unsigned i = 0; i < count; i++) {
+            block(properties[i], &stop);
+            if (stop) break;
+        }
     }
 }
 
@@ -39,10 +48,24 @@ static void *JFLModelCachedPropertyKeysKey = &JFLModelCachedPropertyKeysKey;
     
     NSMutableSet *keys = [NSMutableSet set];
     
+    [self enumeratePropertiesUsingBlock:^(objc_property_t property, BOOL *stop) {
+        NSString *key = @(property_getName(property));
+        
+        [keys addObject:key];
+    }];
     
     objc_setAssociatedObject(self, JFLModelCachedPropertyKeysKey, keys, OBJC_ASSOCIATION_COPY);
     
     return keys;
+}
+
++ (JFLPropertyStorage)storageBehaviorForPropertyWithKey:(NSString *)propertyKey
+{
+    objc_property_t property = class_getProperty(self.class, propertyKey.UTF8String);
+    
+    if (property == NULL) return JFLPropertyStorageNone;
+    
+    
 }
 
 
