@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, jfl_propertyMemoryManagementPolicy) {
     jfl_propertyMemoryManagementPolicyCopy,
 };
 
-struct jfl_propertyAttributes {
+typedef struct {
     BOOL readonly;
     BOOL nonatomic;
     BOOL weak;
@@ -27,4 +27,7 @@ struct jfl_propertyAttributes {
     const char *ivar;
     Class objectClass;
     char type[];
-};
+} jfl_propertyAttributes;
+
+jfl_propertyAttributes *jfl_copyPropertyAttributes (objc_property_t property);
+
