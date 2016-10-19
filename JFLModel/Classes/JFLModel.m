@@ -9,6 +9,7 @@
 #import "JFLModel.h"
 #import <objc/runtime.h>
 #import "EXTScope.h"
+#import "JFLRuntimeExtensions.h"
 
 static void *JFLModelCachedPropertyKeysKey = &JFLModelCachedPropertyKeysKey;
 
@@ -21,7 +22,7 @@ static void *JFLModelCachedPropertyKeysKey = &JFLModelCachedPropertyKeysKey;
     Class cls = self;
     BOOL stop = NO;
     
-    while (!stop) {
+    while (!stop && ![cls isEqual:JFLModel.class]) {
         unsigned count = 0;
         objc_property_t *properties = class_copyPropertyList(cls, &count);
         
@@ -51,7 +52,9 @@ static void *JFLModelCachedPropertyKeysKey = &JFLModelCachedPropertyKeysKey;
     [self enumeratePropertiesUsingBlock:^(objc_property_t property, BOOL *stop) {
         NSString *key = @(property_getName(property));
         
-        [keys addObject:key];
+        if ([self storageBehaviorForPropertyWithKey:key] != JFLPropertyStorageNone) {
+            [keys addObject:key];
+        }
     }];
     
     objc_setAssociatedObject(self, JFLModelCachedPropertyKeysKey, keys, OBJC_ASSOCIATION_COPY);
@@ -65,7 +68,25 @@ static void *JFLModelCachedPropertyKeysKey = &JFLModelCachedPropertyKeysKey;
     
     if (property == NULL) return JFLPropertyStorageNone;
     
-
+    jfl_propertyAttributes *attributes = jfl_copyPropertyAttributes(property);
+    @onExit {
+        free(attributes);
+    };
+    
+    BOOL hasGetter = [self instancesRespondToSelector:attributes->getter];
+    BOOL hasSetter = [self instancesRespondToSelector:attributes->setter];
+    if (!attributes->dynamic && attributes->ivar == NULL && !hasGetter && !hasSetter) {
+        return JFLPropertyStorageNone;
+    } else if (attributes->readonly && attributes->ivar == NULL) {
+        if ([self isEqual:JFLModel.class]) {
+            return JFLPropertyStorageNone;
+        } else {
+            // Check superclass in case the subclass redeclares a property that falls through
+            return [self.superclass storageBehaviorForPropertyWithKey:propertyKey];
+        }
+    } else {
+        return JFLPropertyStoragePermanent;
+    }
 }
 
 

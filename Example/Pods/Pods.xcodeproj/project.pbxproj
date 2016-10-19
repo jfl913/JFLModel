@@ -23,6 +23,8 @@
 		6253C0E199FD4F242A84EBD7BDCF85C2 /* libextobjc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D0040C55301F7F34E12179D00DE127 /* libextobjc-dummy.m */; };
 		6B65D77B0B2C6BA567AE33041A15983D /* EXTConcreteProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B7E0AC4E6D88A4125598BCAC510493B /* EXTConcreteProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8465EC3DC10F5995B21E16B932B46DD8 /* EXTADT.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C95136FAD0F836D63A673F3ACCCF55 /* EXTADT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8599E85A1DB77C9200E80E3D /* JFLReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = 8599E8581DB77C9200E80E3D /* JFLReflection.h */; };
+		8599E85B1DB77C9200E80E3D /* JFLReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8599E8591DB77C9200E80E3D /* JFLReflection.m */; };
 		92A783083083195EFCBCC91C5BC4C087 /* NSInvocation+EXT.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F01C7E07C3983DCB0E86AE916280CF2 /* NSInvocation+EXT.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DED9F536C154E3542F5417843AE81FA /* JFLJSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8924E3FA43A318092DB640E7DD99A7 /* JFLJSONAdapter.m */; };
 		9E106FE64F7F7562FF8509753D6CF91C /* JFLModel.h in Headers */ = {isa = PBXBuildFile; fileRef = EDAD811BCB1E2F2EEAD4CD935C847FF9 /* JFLModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -81,6 +83,8 @@
 		79C95136FAD0F836D63A673F3ACCCF55 /* EXTADT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTADT.h; path = extobjc/EXTADT.h; sourceTree = "<group>"; };
 		7C725C6AFFCD9A9619693A3A56D58ABE /* EXTSynthesize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTSynthesize.h; path = extobjc/EXTSynthesize.h; sourceTree = "<group>"; };
 		80D313C9CF89D160F5FCFA2EC08BB913 /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMethodSignature+EXT.m"; path = "extobjc/NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
+		8599E8581DB77C9200E80E3D /* JFLReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFLReflection.h; sourceTree = "<group>"; };
+		8599E8591DB77C9200E80E3D /* JFLReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFLReflection.m; sourceTree = "<group>"; };
 		898345F6A9E19C8B77F76E757994AC66 /* libextobjc-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "libextobjc-prefix.pch"; sourceTree = "<group>"; };
 		915A71F1B64BCC8895B80F58A6AA988B /* libextobjc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = libextobjc.xcconfig; sourceTree = "<group>"; };
 		98C75CC2F3A1892F3EEC920B8DFB9442 /* EXTScope.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTScope.m; path = extobjc/EXTScope.m; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				05FFD18F940D28CFC631943F5E3CEB67 /* JFLModel.m */,
 				B6C8657A1D8D5E5200C334B2 /* JFLRuntimeExtensions.h */,
 				B6C8657B1D8D5E5200C334B2 /* JFLRuntimeExtensions.m */,
+				8599E8581DB77C9200E80E3D /* JFLReflection.h */,
+				8599E8591DB77C9200E80E3D /* JFLReflection.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8599E85A1DB77C9200E80E3D /* JFLReflection.h in Headers */,
 				5E4EBD513363F1D5E6B509FB935C280E /* JFLJSONAdapter.h in Headers */,
 				B6C8657C1D8D5E5200C334B2 /* JFLRuntimeExtensions.h in Headers */,
 				9E106FE64F7F7562FF8509753D6CF91C /* JFLModel.h in Headers */,
@@ -543,6 +550,7 @@
 				B6C8657D1D8D5E5200C334B2 /* JFLRuntimeExtensions.m in Sources */,
 				2D78CFDAE78784059E8139263EC20759 /* JFLModel-dummy.m in Sources */,
 				31CBECF9EB5EB23128B249942AA51576 /* JFLModel.m in Sources */,
+				8599E85B1DB77C9200E80E3D /* JFLReflection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
