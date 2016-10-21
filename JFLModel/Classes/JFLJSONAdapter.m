@@ -6,8 +6,13 @@
 //
 //
 
+#import <objc/runtime.h>
+#import "JFLRuntimeExtensions.h"
+#import "EXTScope.h"
+
 #import "JFLJSONAdapter.h"
 #import "JFLModel.h"
+#import "JFLReflection.h"
 
 @interface JFLJSONAdapter ()
 
@@ -101,6 +106,37 @@ fromJSONDictionary:(NSDictionary *)JSONDictionary
     NSMutableDictionary *result = [NSMutableDictionary dictionary];
     
     for (NSString *key in [modelClass propertyKeys]) {
+        SEL selector = JFLSelectorWithKeyPattern(key, "JSONTransformer");
+        if ([modelClass respondsToSelector:selector]) {
+            IMP imp = [modelClass methodForSelector:selector];
+            NSValueTransformer * (*function)(id, SEL) = (__typeof__(function))imp;
+            NSValueTransformer *transformer = function(modelClass, selector);
+            
+            if (transformer != nil) result[key] = transformer;
+            
+            continue;
+        }
+        
+        if ([modelClass respondsToSelector:@selector(JSONTransformerForKey:)]) {
+            NSValueTransformer *transformer = [modelClass JSONTransformerForKey:key];
+            
+            if (transformer != nil) {
+                result[key] = transformer;
+                continue;
+            }
+        }
+        
+        objc_property_t property = class_getProperty(modelClass, key.UTF8String);
+        
+        if(property == NULL) continue;
+        
+        jfl_propertyAttributes *attributes = jfl_copyPropertyAttributes(property);
+        @onExit {
+            free(attributes);
+        };
+        
+        NSValueTransformer *transformer = nil;
+        
         
     }
     

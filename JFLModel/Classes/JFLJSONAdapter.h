@@ -13,6 +13,10 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey;
 
+@optional
+
++(NSValueTransformer *)JSONTransformerForKey:(NSString *)key;
+
 @end
 
 @interface JFLJSONAdapter : NSObject

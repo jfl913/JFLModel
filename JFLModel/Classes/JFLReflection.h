@@ -10,6 +10,6 @@
 
 @interface JFLReflection : NSObject
 
-
+SEL JFLSelectorWithKeyPattern(NSString *key, const char *suffix);
 
 @end
