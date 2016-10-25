@@ -33,3 +33,10 @@ fromJSONDictionary:(NSDictionary *)JSONDictionary
              error:(NSError *)error;
 
 @end
+
+@interface JFLJSONAdapter (ValueTransformers)
+
++ (NSValueTransformer *)dictionaryTransformerWithModelClass:(Class)modelClass;
+
+@end
+

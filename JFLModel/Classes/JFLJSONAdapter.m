@@ -137,11 +137,36 @@ fromJSONDictionary:(NSDictionary *)JSONDictionary
         
         NSValueTransformer *transformer = nil;
         
-        
+        if (*(attributes->type) == *(@encode(id))) {
+            Class propertyClass = attributes->objectClass;
+            
+            if (propertyClass != nil) {
+                transformer = [self transformerForModelPropertiesOfClass:modelClass];
+            }
+            
+            // For user-defined JFLModel, try parse it with dictionaryTransformer.
+            if (nil == transformer && [propertyClass conformsToProtocol:@protocol(JFLJSONSerializing)]) {
+                
+            }
+        }
     }
     
     
     return nil;
+}
+
++ (NSValueTransformer *)transformerForModelPropertiesOfClass:(Class)modelClass
+{
+    NSParameterAssert(modelClass != nil);
+    
+    SEL selector = JFLSelectorWithKeyPattern(NSStringFromClass(modelClass), "JSONTransformer");
+    if (![self respondsToSelector:selector]) return nil;
+    
+    IMP imp  = [self methodForSelector:selector];
+    NSValueTransformer * (*function)(id, SEL) = (__typeof__(function))imp;
+    NSValueTransformer *result = function(self, selector);
+    
+    return result;
 }
 
 @end
