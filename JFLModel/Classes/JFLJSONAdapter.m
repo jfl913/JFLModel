@@ -13,6 +13,7 @@
 #import "JFLJSONAdapter.h"
 #import "JFLModel.h"
 #import "JFLReflection.h"
+#import "JFLTransformerErrorHandling.h"
 
 @interface JFLJSONAdapter ()
 
@@ -167,6 +168,19 @@ fromJSONDictionary:(NSDictionary *)JSONDictionary
     NSValueTransformer *result = function(self, selector);
     
     return result;
+}
+
+@end
+
+@implementation JFLJSONAdapter (ValueTransformers)
+
++ (NSValueTransformer<JFLTransformerErrorHandling> *)dictionaryTransformerWithModelClass:(Class)modelClass
+{
+    NSParameterAssert([modelClass conformsToProtocol:@protocol(JFLModel)]);
+    NSParameterAssert([modelClass conformsToProtocol:@protocol(JFLJSONSerializing)]);
+    __block JFLJSONAdapter *adapter;
+    
+    
 }
 
 @end
