@@ -14,6 +14,7 @@
 #import "JFLModel.h"
 #import "JFLReflection.h"
 #import "JFLTransformerErrorHandling.h"
+#import "JFLValueTransformer.h"
 
 @interface JFLJSONAdapter ()
 
@@ -99,6 +100,16 @@ fromJSONDictionary:(NSDictionary *)JSONDictionary
 
 #pragma mark - Serialization
 
+- (NSDictionary *)JSONDictionaryFromModel:(id<JFLJSONSerializing>)model error:(NSError **)error
+{
+    return nil;
+}
+
+- (id)modelFromJSONDictionary:(NSDictionary *)JSONDictionary error:(NSError **)error
+{
+    return nil;
+}
+
 + (NSDictionary *)valueTransformersForModelClass:(Class)modelClass
 {
     NSParameterAssert(modelClass != nil);
@@ -180,6 +191,59 @@ fromJSONDictionary:(NSDictionary *)JSONDictionary
     NSParameterAssert([modelClass conformsToProtocol:@protocol(JFLJSONSerializing)]);
     __block JFLJSONAdapter *adapter;
     
+    return [JFLValueTransformer transformerUsingForwardBlock:^id(id JSONDictionary, BOOL *success, NSError *__autoreleasing *error) {
+        if (JSONDictionary == nil) return nil;
+        
+        if (![JSONDictionary isKindOfClass:[NSDictionary class]]) {
+            if (error != NULL) {
+                NSDictionary *userInfo = @{
+                                           NSLocalizedDescriptionKey: @"Could not convert JSON dictionary to model object",
+                                           NSLocalizedFailureReasonErrorKey: [NSString stringWithFormat:@"Expected an NSDictionary, got: %@", JSONDictionary],
+                                           JFLTransformerErrorHandlingInputValueErrorKey: JSONDictionary
+                                           };
+                *error = [NSError errorWithDomain:JFLTransformerErrorHandlingErrorDomain code:JFLTransformerErrorHandlingErrorInvalidInput userInfo:userInfo];
+                
+            }
+            
+            *success = NO;
+            return nil;
+        }
+        
+        if (!adapter) {
+            adapter = [[self alloc] initWithModelClass:modelClass];
+        }
+        id model = [adapter modelFromJSONDictionary:JSONDictionary error:error];
+        if (model == nil) {
+            *success = NO;
+        }
+        
+        return model;
+    } reverseBlock:^ NSDictionary * (id model, BOOL *success, NSError *__autoreleasing *error) {
+        if (model == nil) return nil;
+        
+        if (![model conformsToProtocol:@protocol(JFLModel)] || ![model conformsToProtocol:@protocol(JFLJSONSerializing)]) {
+            if (error != NULL) {
+                NSDictionary *userInfo = @{
+                                           NSLocalizedDescriptionKey: @"Could not convert model object to JSON dictionary",
+                                           NSLocalizedFailureReasonErrorKey: [NSString stringWithFormat:@"Expected a JFLModel object conforming to <JFLJSONSerializing>, got: %@", model],
+                                           JFLTransformerErrorHandlingInputValueErrorKey: model
+                                           };
+                *error = [NSError errorWithDomain:JFLTransformerErrorHandlingErrorDomain code:JFLTransformerErrorHandlingErrorInvalidInput userInfo:userInfo];
+            }
+            *success = NO;
+            return nil;
+        }
+        
+        if (!adapter) {
+            adapter = [[self alloc] initWithModelClass:modelClass];
+        }
+        NSDictionary *result = [adapter JSONDictionaryFromModel:model error:error];
+        if (result == nil) {
+            *success = NO;
+        }
+        
+        return result;
+    }];
     
 }
 
