@@ -102,7 +102,78 @@ fromJSONDictionary:(NSDictionary *)JSONDictionary
 
 - (NSDictionary *)JSONDictionaryFromModel:(id<JFLJSONSerializing>)model error:(NSError **)error
 {
-    return nil;
+    NSParameterAssert(model != nil);
+    NSParameterAssert([model isKindOfClass:self.modelClass]);
+    
+    if (self.modelClass != model.class) {
+        // 暂时不写
+    }
+    
+    NSSet *propertyKeysToSerialize = [self serializablePropertyKeys:[NSSet setWithArray:self.JSONKeyPathsByPropertyKey.allKeys] forModel:model];
+    
+    NSDictionary *dictionaryValue = [model.dictionaryValue dictionaryWithValuesForKeys:propertyKeysToSerialize.allObjects];
+    NSMutableDictionary *JSONDictionary = [[NSMutableDictionary alloc] initWithCapacity:dictionaryValue.count];
+    
+    __block BOOL success = YES;
+    __block NSError *tmpError = nil;
+    
+    [dictionaryValue enumerateKeysAndObjectsUsingBlock:^(NSString *propertyKey, id value, BOOL *stop) {
+        id JSONKeyPaths = self.JSONKeyPathsByPropertyKey[propertyKey];
+        
+        if (JSONKeyPaths == nil) return;
+        
+        NSValueTransformer *transformer = self.valueTransformersByPropertyKey[propertyKey];
+        if ([transformer.class allowsReverseTransformation]) {
+            if ([value isEqual:NSNull.null]) value = nil;
+            
+            if ([transformer respondsToSelector:@selector(reverseTransformedValue:success:error:)]) {
+                id<JFLTransformerErrorHandling> errorHandlingTransformer = (id)transformer;
+                
+                value = [errorHandlingTransformer reverseTransformedValue:value success:&success error:&tmpError];
+                
+                if (!success) {
+                    *stop = YES;
+                    return;
+                }
+            } else {
+                value = [transformer reverseTransformedValue:value] ?: NSNull.null;
+            }
+        }
+        
+        void (^createComponents)(id, NSString *) = ^(id obj, NSString *keyPath) {
+            NSArray *keyPathComponents = [keyPath componentsSeparatedByString:@"."];
+            
+            for (NSString *component in keyPathComponents) {
+                if ([obj valueForKey:component] == nil) {
+                    [obj setValue:[NSMutableDictionary dictionary] forKey:component];
+                }
+                
+                obj = [obj valueForKey:component];
+            }
+        };
+        
+        if ([JSONKeyPaths isKindOfClass:[NSString class]]) {
+            createComponents(JSONDictionary, JSONKeyPaths);
+            
+            [JSONDictionary setValue:value forKeyPath:JSONKeyPaths];
+        }
+        
+        if ([JSONKeyPaths isKindOfClass:[NSArray class]]) {
+            for (NSString *JSONKeyPath in JSONKeyPaths) {
+                createComponents(JSONDictionary, JSONKeyPath);
+                
+                [JSONDictionary setValue:value forKeyPath:JSONKeyPath];
+            }
+        }
+    }];
+    
+    if (success) {
+        return JSONDictionary;
+    } else {
+        if (error != NULL) *error = tmpError;
+        
+        return nil;
+    }
 }
 
 - (id)modelFromJSONDictionary:(NSDictionary *)JSONDictionary error:(NSError **)error
@@ -165,6 +236,11 @@ fromJSONDictionary:(NSDictionary *)JSONDictionary
     
     
     return nil;
+}
+
+- (NSSet *)serializablePropertyKeys:(NSSet *)propertyKeys forModel:(id <JFLJSONSerializing>)model
+{
+    return propertyKeys;
 }
 
 + (NSValueTransformer *)transformerForModelPropertiesOfClass:(Class)modelClass

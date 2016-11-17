@@ -12,8 +12,36 @@
 #import "JFLRuntimeExtensions.h"
 
 static void *JFLModelCachedPropertyKeysKey = &JFLModelCachedPropertyKeysKey;
+static void *JFLModelCachedTransitoryPropertyKeysKey = &JFLModelCachedTransitoryPropertyKeysKey;
+static void *JFLModelCachedPermanentPropertyKeysKey = &JFLModelCachedPermanentPropertyKeysKey;
 
 @implementation JFLModel
+
+#pragma mark Lifecycle
+
++ (void)generateAndCacheStorageBehaviors
+{
+    NSMutableSet *transitoryKeys = [NSMutableSet set];
+    NSMutableSet *permanentKeys = [NSMutableSet set];
+    
+    for (NSString *propertyKey in self.propertyKeys) {
+        switch ([self storageBehaviorForPropertyWithKey:propertyKey]) {
+            case JFLPropertyStorageNone:
+                break;
+            case JFLPropertyStorageTransitory:
+                [transitoryKeys addObject:propertyKey];
+                break;
+            case JFLPropertyStoragePermanent:
+                [permanentKeys addObject:propertyKey];
+                break;
+            default:
+                break;
+        }
+    }
+    
+    objc_setAssociatedObject(self, JFLModelCachedTransitoryPropertyKeysKey, transitoryKeys, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, JFLModelCachedPermanentPropertyKeysKey, permanentKeys, OBJC_ASSOCIATION_COPY);
+}
 
 #pragma mark Reflection
 
@@ -60,6 +88,37 @@ static void *JFLModelCachedPropertyKeysKey = &JFLModelCachedPropertyKeysKey;
     objc_setAssociatedObject(self, JFLModelCachedPropertyKeysKey, keys, OBJC_ASSOCIATION_COPY);
     
     return keys;
+}
+
++ (NSSet *)transitoryPropertyKeys
+{
+    NSSet *transitoryPropertyKeys = objc_getAssociatedObject(self, JFLModelCachedTransitoryPropertyKeysKey);
+    
+    if (transitoryPropertyKeys == nil) {
+        [self generateAndCacheStorageBehaviors];
+        transitoryPropertyKeys = objc_getAssociatedObject(self, JFLModelCachedTransitoryPropertyKeysKey);
+    }
+    
+    return transitoryPropertyKeys;
+}
+
++ (NSSet *)permanentPropertyKeys
+{
+    NSSet *permanentPropertyKeys = objc_getAssociatedObject(self, JFLModelCachedPermanentPropertyKeysKey);
+    
+    if (permanentPropertyKeys == nil) {
+        [self generateAndCacheStorageBehaviors];
+        permanentPropertyKeys = objc_getAssociatedObject(self, JFLModelCachedPermanentPropertyKeysKey);
+    }
+    
+    return permanentPropertyKeys;
+}
+
+- (NSDictionary *)dictionaryValue
+{
+    NSSet *keys = [self.class.transitoryPropertyKeys setByAddingObjectsFromSet:self.class.permanentPropertyKeys];
+    
+    return [self dictionaryWithValuesForKeys:keys.allObjects];
 }
 
 + (JFLPropertyStorage)storageBehaviorForPropertyWithKey:(NSString *)propertyKey

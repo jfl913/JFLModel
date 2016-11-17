@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol JFLJSONSerializing <NSObject>
+@protocol JFLModel;
+@protocol JFLTransformerErrorHandling;
+
+@protocol JFLJSONSerializing <JFLModel>
 @required
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey;
