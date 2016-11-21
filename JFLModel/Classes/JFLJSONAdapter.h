@@ -22,18 +22,21 @@
 
 @end
 
+extern NSString * const MTLJSONAdapterErrorDomain;
+extern const NSInteger JFLJSONAdapterErrorInvalidJSONDictionary;
+
 @interface JFLJSONAdapter : NSObject
 
 + (id)modelOfClass:(Class)modelClass
          fromModel:(id)model
-             error:(NSError *)error;
+             error:(NSError **)error;
 
 + (NSDictionary *)JSONDictionaryFromModel:(id)model
-                                    error:(NSError *)error;
+                                    error:(NSError **)error;
 
 + (id)modelOfClass:(Class)modelClass
 fromJSONDictionary:(NSDictionary *)JSONDictionary
-             error:(NSError *)error;
+             error:(NSError **)error;
 
 @end
 

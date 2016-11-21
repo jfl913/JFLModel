@@ -43,6 +43,24 @@ static void *JFLModelCachedPermanentPropertyKeysKey = &JFLModelCachedPermanentPr
     objc_setAssociatedObject(self, JFLModelCachedPermanentPropertyKeysKey, permanentKeys, OBJC_ASSOCIATION_COPY);
 }
 
++ (instancetype)modelWithDictionary:(NSDictionary *)dictionary error:(NSError **)error
+{
+//    return [[self alloc] initWithDictionary:<#(nonnull NSDictionary *)#>]
+}
+
+- (instancetype)init
+{
+    return [super init];
+}
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary error:(NSError **)error
+{
+    self = [self init];
+    if (self == nil) return nil;
+    
+    
+}
+
 #pragma mark Reflection
 
 + (void)enumeratePropertiesUsingBlock:(void (^)(objc_property_t property, BOOL *stop))block

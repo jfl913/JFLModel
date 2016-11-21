@@ -15,6 +15,10 @@
 #import "JFLReflection.h"
 #import "JFLTransformerErrorHandling.h"
 #import "JFLValueTransformer.h"
+#import "NSDictionary+JFLJSONKeyPath.h"
+
+NSString * const JFLJSONAdapterErrorDomain = @"JFLJSONAdapterErrorDomain";
+const NSInteger JFLJSONAdapterErrorInvalidJSONDictionary = 3;
 
 @interface JFLJSONAdapter ()
 
@@ -30,7 +34,7 @@
 
 + (id)modelOfClass:(Class)modelClass
          fromModel:(id)model
-             error:(NSError *)error
+             error:(NSError **)error
 {
     NSDictionary *JSONDictionary = [self JSONDictionaryFromModel:model
                                                            error:error];
@@ -40,15 +44,15 @@
 }
 
 + (NSDictionary *)JSONDictionaryFromModel:(id<JFLJSONSerializing>)model
-                                    error:(NSError *)error
+                                    error:(NSError **)error
 {
     JFLJSONAdapter *adapter = [[self alloc] initWithModelClass:model.class];
-    return @{};
+    return [adapter JSONDictionaryFromModel:model error:error];
 }
 
 + (id)modelOfClass:(Class)modelClass
 fromJSONDictionary:(NSDictionary *)JSONDictionary
-             error:(NSError *)error
+             error:(NSError **)error
 {
     JFLJSONAdapter *adapter = [[self alloc] initWithModelClass:modelClass];
     return nil;
@@ -100,6 +104,7 @@ fromJSONDictionary:(NSDictionary *)JSONDictionary
 
 #pragma mark - Serialization
 
+// 把model转化为字典
 - (NSDictionary *)JSONDictionaryFromModel:(id<JFLJSONSerializing>)model error:(NSError **)error
 {
     NSParameterAssert(model != nil);
@@ -178,6 +183,69 @@ fromJSONDictionary:(NSDictionary *)JSONDictionary
 
 - (id)modelFromJSONDictionary:(NSDictionary *)JSONDictionary error:(NSError **)error
 {
+    // 类簇暂不处理
+    
+    NSMutableDictionary *dictionaryValue = [[NSMutableDictionary alloc] initWithCapacity:JSONDictionary.count];
+    // 这里把服务端给过来的字典，key都替换为model里面的property，value转换为我们需要的类型。存到dictionaryValue。
+    for (NSString *propertyKey in [self.modelClass propertyKeys]) {
+        id JSONKeyPaths = self.JSONKeyPathsByPropertyKey[propertyKey];
+        
+        if (JSONKeyPaths == nil) continue;
+        
+        id value;
+        
+        if ([JSONKeyPaths isKindOfClass:[NSArray class]]) {
+            NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+            
+            for (NSString *keyPath in JSONKeyPaths) {
+                BOOL success = NO;
+                id value = [JSONDictionary jfl_valueForJSONKeyPath:keyPath success:&success error:error];
+                
+                if (!success) return nil;
+                
+                if (value != nil) dictionary[keyPath] = value;
+            }
+            
+            value = dictionary;
+        } else {
+            BOOL success = NO;
+            value = [JSONDictionary jfl_valueForJSONKeyPath:JSONKeyPaths success:&success error:error];
+            
+            if (!success) return nil;
+        }
+        
+        if (value == nil) continue;
+        
+        @try {
+            NSValueTransformer *transformer = self.valueTransformersByPropertyKey[propertyKey];
+            if (transformer != nil) {
+                if ([value isEqual:NSNull.null]) value = nil;
+                
+                if ([transformer respondsToSelector:@selector(transformedValue:success:error:)]) {
+                    id<JFLTransformerErrorHandling> errorHandlingTransformer = (id)transformer;
+                    
+                    BOOL success = YES;
+                    value = [errorHandlingTransformer transformedValue:value success:&success error:error];
+                    
+                    if (!success) return nil;
+                } else {
+                    value = [transformer transformedValue:value];
+                }
+                
+                if (value == nil) value = NSNull.null;
+            }
+            
+            dictionaryValue[propertyKey] = value;
+        } @catch (NSException *exception) {
+            
+        } @finally {
+            
+        }
+    }
+    
+    id model = [self.modelClass ];
+    
+    
     return nil;
 }
 

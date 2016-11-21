@@ -26,6 +26,8 @@
 		6B65D77B0B2C6BA567AE33041A15983D /* EXTConcreteProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B7E0AC4E6D88A4125598BCAC510493B /* EXTConcreteProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70DBF4CED6F6230C93322324EEE448C6 /* JFLModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1CF8DDDF2F5F8AA03FC3D67E806D39 /* JFLModel-dummy.m */; };
 		8465EC3DC10F5995B21E16B932B46DD8 /* EXTADT.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C95136FAD0F836D63A673F3ACCCF55 /* EXTADT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		857BB8071DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 857BB8051DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.h */; };
+		857BB8081DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 857BB8061DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.m */; };
 		8ECFFF38A862422F276099359EC100B8 /* JFLModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A623D87687513E0D4C81AEABFD1E312C /* JFLModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92A783083083195EFCBCC91C5BC4C087 /* NSInvocation+EXT.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F01C7E07C3983DCB0E86AE916280CF2 /* NSInvocation+EXT.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E1844C2F17E012C378EDE0F049388CE /* JFLJSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0C6F520793F12E8433130B574BD713 /* JFLJSONAdapter.m */; };
@@ -93,6 +95,8 @@
 		79C95136FAD0F836D63A673F3ACCCF55 /* EXTADT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTADT.h; path = extobjc/EXTADT.h; sourceTree = "<group>"; };
 		7C725C6AFFCD9A9619693A3A56D58ABE /* EXTSynthesize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTSynthesize.h; path = extobjc/EXTSynthesize.h; sourceTree = "<group>"; };
 		80D313C9CF89D160F5FCFA2EC08BB913 /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMethodSignature+EXT.m"; path = "extobjc/NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
+		857BB8051DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JFLJSONKeyPath.h"; sourceTree = "<group>"; };
+		857BB8061DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JFLJSONKeyPath.m"; sourceTree = "<group>"; };
 		86584749D09BCCAB45025523C8D297DD /* JFLValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JFLValueTransformer.m; sourceTree = "<group>"; };
 		898345F6A9E19C8B77F76E757994AC66 /* libextobjc-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "libextobjc-prefix.pch"; sourceTree = "<group>"; };
 		915A71F1B64BCC8895B80F58A6AA988B /* libextobjc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = libextobjc.xcconfig; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				B3452657934CC929E14E8EF2E35FF899 /* JFLTransformerErrorHandling.m */,
 				05A8038303099B64177E63A80D819385 /* JFLValueTransformer.h */,
 				86584749D09BCCAB45025523C8D297DD /* JFLValueTransformer.m */,
+				857BB8051DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.h */,
+				857BB8061DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -419,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACBEECC1B2CFDF9AE306DAD506893A61 /* JFLJSONAdapter.h in Headers */,
+				857BB8071DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.h in Headers */,
 				8ECFFF38A862422F276099359EC100B8 /* JFLModel.h in Headers */,
 				EDBE984F15C86DBE1E4E104912D3E265 /* JFLReflection.h in Headers */,
 				600D23B119CBD58884F571A217CA7E03 /* JFLRuntimeExtensions.h in Headers */,
@@ -566,6 +573,7 @@
 				5DBC0627C3215738DE5F282C9B85B0BB /* JFLReflection.m in Sources */,
 				ABDC6234E55EF8B53FF911CFB2FEF186 /* JFLRuntimeExtensions.m in Sources */,
 				AEBC66C4E6D6C30B25E3821023B9888F /* JFLTransformerErrorHandling.m in Sources */,
+				857BB8081DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.m in Sources */,
 				28FB9406C532B08A97AC3E0CF37CBA02 /* JFLValueTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
