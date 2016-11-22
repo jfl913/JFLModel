@@ -10,10 +10,38 @@
 #import <objc/runtime.h>
 #import "EXTScope.h"
 #import "JFLRuntimeExtensions.h"
+#import "NSError+JFLModelException.h"
 
 static void *JFLModelCachedPropertyKeysKey = &JFLModelCachedPropertyKeysKey;
 static void *JFLModelCachedTransitoryPropertyKeysKey = &JFLModelCachedTransitoryPropertyKeysKey;
 static void *JFLModelCachedPermanentPropertyKeysKey = &JFLModelCachedPermanentPropertyKeysKey;
+
+static BOOL JFLValidateAndSetValue(id obj, NSString *key, id value, BOOL forceUpdate, NSError **error)
+{
+    __autoreleasing id validateValue = value;
+    
+    @try {
+        if (![obj validateValue:&validateValue forKey:key error:error]) return NO;
+        
+        if (forceUpdate || validateValue != value) {
+            [obj setValue:value forKey:key];
+        }
+        
+        return YES;
+    } @catch (NSException *exception) {
+        NSLog(@"*** Caught exception setting key \"%@\" : %@", key, exception);
+        
+        #if DEBUG
+        @throw exception;
+        #else
+        if (error != NULL) {
+            *error = [NSError jfl_modelErrorWithException:exception];
+        }
+        
+        return NO;
+        #endif
+    }
+}
 
 @implementation JFLModel
 
@@ -45,7 +73,7 @@ static void *JFLModelCachedPermanentPropertyKeysKey = &JFLModelCachedPermanentPr
 
 + (instancetype)modelWithDictionary:(NSDictionary *)dictionary error:(NSError **)error
 {
-//    return [[self alloc] initWithDictionary:<#(nonnull NSDictionary *)#>]
+    return [[self alloc] initWithDictionary:dictionary error:error];
 }
 
 - (instancetype)init
@@ -58,7 +86,16 @@ static void *JFLModelCachedPermanentPropertyKeysKey = &JFLModelCachedPermanentPr
     self = [self init];
     if (self == nil) return nil;
     
+    for (NSString *key in dictionary) {
+        __autoreleasing id value = [dictionary objectForKey:key];
+        
+        if ([value isEqual:NSNull.null]) value = nil;
+        
+        BOOL success = JFLValidateAndSetValue(self, key, value, YES, error);
+        if (!success) return nil;
+    }
     
+    return self;
 }
 
 #pragma mark Reflection
@@ -166,5 +203,18 @@ static void *JFLModelCachedPermanentPropertyKeysKey = &JFLModelCachedPermanentPr
     }
 }
 
+#pragma mark Validation
+
+- (BOOL)validate:(NSError **)error
+{
+    for (NSString *key in self.class.propertyKeys) {
+        id value = [self valueForKey:key];
+        
+        BOOL success = JFLValidateAndSetValue(self, key, value, NO, error);
+        if (!success) return NO;
+    }
+    
+    return YES;
+}
 
 @end

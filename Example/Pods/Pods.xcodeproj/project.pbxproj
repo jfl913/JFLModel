@@ -26,6 +26,8 @@
 		6B65D77B0B2C6BA567AE33041A15983D /* EXTConcreteProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B7E0AC4E6D88A4125598BCAC510493B /* EXTConcreteProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70DBF4CED6F6230C93322324EEE448C6 /* JFLModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1CF8DDDF2F5F8AA03FC3D67E806D39 /* JFLModel-dummy.m */; };
 		8465EC3DC10F5995B21E16B932B46DD8 /* EXTADT.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C95136FAD0F836D63A673F3ACCCF55 /* EXTADT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85612BC51DE45CF6008381F3 /* NSError+JFLModelException.h in Headers */ = {isa = PBXBuildFile; fileRef = 85612BC31DE45CF6008381F3 /* NSError+JFLModelException.h */; };
+		85612BC61DE45CF6008381F3 /* NSError+JFLModelException.m in Sources */ = {isa = PBXBuildFile; fileRef = 85612BC41DE45CF6008381F3 /* NSError+JFLModelException.m */; };
 		857BB8071DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 857BB8051DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.h */; };
 		857BB8081DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 857BB8061DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.m */; };
 		8ECFFF38A862422F276099359EC100B8 /* JFLModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A623D87687513E0D4C81AEABFD1E312C /* JFLModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -95,6 +97,8 @@
 		79C95136FAD0F836D63A673F3ACCCF55 /* EXTADT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTADT.h; path = extobjc/EXTADT.h; sourceTree = "<group>"; };
 		7C725C6AFFCD9A9619693A3A56D58ABE /* EXTSynthesize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTSynthesize.h; path = extobjc/EXTSynthesize.h; sourceTree = "<group>"; };
 		80D313C9CF89D160F5FCFA2EC08BB913 /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMethodSignature+EXT.m"; path = "extobjc/NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
+		85612BC31DE45CF6008381F3 /* NSError+JFLModelException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+JFLModelException.h"; sourceTree = "<group>"; };
+		85612BC41DE45CF6008381F3 /* NSError+JFLModelException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+JFLModelException.m"; sourceTree = "<group>"; };
 		857BB8051DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JFLJSONKeyPath.h"; sourceTree = "<group>"; };
 		857BB8061DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JFLJSONKeyPath.m"; sourceTree = "<group>"; };
 		86584749D09BCCAB45025523C8D297DD /* JFLValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JFLValueTransformer.m; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 		028681293EB331F16D1A20A7215B94C0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				85612BC21DE45CC5008381F3 /* Extensions */,
 				47001D0004F82F057EB26C602664FC5B /* JFLJSONAdapter.h */,
 				3B0C6F520793F12E8433130B574BD713 /* JFLJSONAdapter.m */,
 				A623D87687513E0D4C81AEABFD1E312C /* JFLModel.h */,
@@ -304,6 +309,15 @@
 			);
 			sourceTree = "<group>";
 		};
+		85612BC21DE45CC5008381F3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				85612BC31DE45CF6008381F3 /* NSError+JFLModelException.h */,
+				85612BC41DE45CF6008381F3 /* NSError+JFLModelException.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		88CD6454BBE513E484A4A92205B4C5D0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +441,7 @@
 				ACBEECC1B2CFDF9AE306DAD506893A61 /* JFLJSONAdapter.h in Headers */,
 				857BB8071DE2EF1000D238BE /* NSDictionary+JFLJSONKeyPath.h in Headers */,
 				8ECFFF38A862422F276099359EC100B8 /* JFLModel.h in Headers */,
+				85612BC51DE45CF6008381F3 /* NSError+JFLModelException.h in Headers */,
 				EDBE984F15C86DBE1E4E104912D3E265 /* JFLReflection.h in Headers */,
 				600D23B119CBD58884F571A217CA7E03 /* JFLRuntimeExtensions.h in Headers */,
 				3BBBA6939FB4369DDE9ACD5DF02860C9 /* JFLTransformerErrorHandling.h in Headers */,
@@ -569,6 +584,7 @@
 			files = (
 				9E1844C2F17E012C378EDE0F049388CE /* JFLJSONAdapter.m in Sources */,
 				70DBF4CED6F6230C93322324EEE448C6 /* JFLModel-dummy.m in Sources */,
+				85612BC61DE45CF6008381F3 /* NSError+JFLModelException.m in Sources */,
 				AEDBE5726F920C900362E21AE444A49A /* JFLModel.m in Sources */,
 				5DBC0627C3215738DE5F282C9B85B0BB /* JFLReflection.m in Sources */,
 				ABDC6234E55EF8B53FF911CFB2FEF186 /* JFLRuntimeExtensions.m in Sources */,

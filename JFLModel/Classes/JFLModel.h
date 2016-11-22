@@ -16,9 +16,13 @@ typedef NS_ENUM(NSUInteger, JFLPropertyStorage) {
 
 @protocol JFLModel <NSObject>
 
++ (instancetype)modelWithDictionary:(NSDictionary *)dictionary error:(NSError **)error;
+
 @property (nonatomic, copy, readonly) NSDictionary *dictionaryValue;
 
 + (NSSet *)propertyKeys;
+
+- (BOOL)validate:(NSError **)error;
 
 @end
 

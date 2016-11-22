@@ -243,10 +243,9 @@ fromJSONDictionary:(NSDictionary *)JSONDictionary
         }
     }
     
-    id model = [self.modelClass ];
+    id model = [self.modelClass modelWithDictionary:dictionaryValue error:error];
     
-    
-    return nil;
+    return [model validate:error] ? model : nil;
 }
 
 + (NSDictionary *)valueTransformersForModelClass:(Class)modelClass
